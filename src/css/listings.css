@@ -1,0 +1,18 @@
+@import url('./main.css');
+
+.container-listings .shield {
+    background-color: violet;
+    height: 3rem;
+    width: 3rem;
+}
+.container-listings .header-listings {
+    display: flex;
+}
+.container-listings .name-team select {
+    background-color: var(--white);
+    border: inherit;
+    outline: none;
+
+    width: 14rem;
+    font-size: 1rem;
+}
