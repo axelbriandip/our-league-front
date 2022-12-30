@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+
+import { getPlayersThunk } from '../store/slices/players.slice';
+import { useDispatch } from 'react-redux';
+
 const Listings = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPlayersThunk())
+    }, [])
+
     return (
         <div className="container-listings">
             <h2>Listados de jugadores</h2>

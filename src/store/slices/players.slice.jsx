@@ -1,13 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import axios from 'axios';
+
 export const playersSlice = createSlice({
     name: 'name1',
     initialState: 'algo',
     reducers: {
-        // all actions
+        setPlayers: (state, action) => {
+            return action.payload
+        }
     }
 })
 
-export const { } = playersSlice.actions;
+const urlAllPokemons = 'https://pokeapi.co/api/v2/pokemon';
+const urlSelf = 'https://our-league2.onrender.com/api/v1/players';
+
+export const getPlayersThunk = () => (dispatch) => {
+    return axios.get(urlSelf)
+        .then(res => dispatch(setPlayers(res.data)))
+}
+
+export const { setPlayers } = playersSlice.actions;
 
 export default playersSlice.reducer;
