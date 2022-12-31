@@ -17,7 +17,7 @@ const urlSelf = 'https://our-league2.onrender.com/api/v1/players';
 
 export const getPlayersThunk = () => (dispatch) => {
     return axios.get(urlSelf)
-        .then(res => dispatch(setPlayers(res.data)))
+        .then(res => dispatch(setPlayers(res.data.data.players)))
 }
 
 export const { setPlayers } = playersSlice.actions;

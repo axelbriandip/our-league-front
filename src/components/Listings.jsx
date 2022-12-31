@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import { getPlayersThunk } from '../store/slices/players.slice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Listings = () => {
     const dispatch = useDispatch();
@@ -9,6 +9,9 @@ const Listings = () => {
     useEffect(() => {
         dispatch(getPlayersThunk())
     }, [])
+
+    const players = useSelector(state => state.playersSlice);
+    console.log(players);
 
     return (
         <div className="container-listings">
@@ -28,7 +31,16 @@ const Listings = () => {
                 </div>
             </div>
             <div className="lists-players">
-                Lists players
+                <h3>Listado</h3>
+                <div className="container-players">
+                    {
+                        players.map(item => (
+                            <div className="item" key={item.id}>
+                                {item.name} - {item.age} años
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     );
