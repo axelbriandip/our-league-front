@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const playersSlice = createSlice({
     name: 'name1',
-    initialState: 'algo',
+    initialState: [],
     reducers: {
         setPlayers: (state, action) => {
             return action.payload

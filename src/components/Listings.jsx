@@ -2,16 +2,21 @@ import { useEffect } from "react";
 
 import { getPlayersThunk } from '../store/slices/players.slice';
 import { useDispatch, useSelector } from 'react-redux';
+import { getTeamsThunk } from "../store/slices/teams.slice";
 
 const Listings = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getPlayersThunk())
+        dispatch(getPlayersThunk());
+        dispatch(getTeamsThunk());
     }, [])
 
     const players = useSelector(state => state.playersSlice);
-    console.log(players);
+    const teams = useSelector(state => state.teamsSlice);
+
+    // console.log(players);
+    // console.log(teams);
 
     return (
         <div className="container-listings">
@@ -22,11 +27,13 @@ const Listings = () => {
                 </div>
                 <div className="name-team">
                     <select name="">
-                        <option value="0">Seleccionar equipo</option>
-                        <option value="1">Olimpo</option>
-                        <option value="2">Nápoli</option>
-                        <option value="3">Defensores del eco</option>
-                        <option value="4">Recolección</option>
+                        {
+                            teams.map(item => (
+                                <option value={`${item.id}`} key={item.id}>
+                                    {item.name}
+                                </option>
+                            ))
+                        }
                     </select>
                 </div>
             </div>
