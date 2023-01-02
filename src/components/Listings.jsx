@@ -60,6 +60,7 @@ const Listings = () => {
                                     <li className="list-group-item">Sin sanción</li>
                                     <li className="list-group-item">Pase: Defensores del eco</li>
                                     <li className="list-group-item">Préstamo: -</li>
+                                    <li className="list-group-item">Editar Eliminar</li>
                                 </ul>
                             </div>
                         ))

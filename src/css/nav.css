@@ -1,10 +1,12 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 1rem;
 
     border-top: .1rem solid var(--black);
     border-bottom: .1rem solid var(--black);
+
+    background-color: #fff;
 }
 .nav ul {
     display: flex;
