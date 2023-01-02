@@ -15,9 +15,6 @@ const Listings = () => {
     const players = useSelector(state => state.playersSlice);
     const teams = useSelector(state => state.teamsSlice);
 
-    // console.log(players);
-    // console.log(teams);
-
     return (
         <div className="container-listings">
             <div className="header-listings">
@@ -44,12 +41,21 @@ const Listings = () => {
                 </div>
             </div>
             <div className="lists-players">
-                <h3>Listado</h3>
                 <div className="container-players">
                     {
                         players.map(item => (
-                            <div className="item" key={item.id}>
-                                {item.lastname}, {item.name} - {item.age} años
+                            <div key={item.id} className="card" style={{ width: '18rem' }}>
+                                <div className="card-header">
+                                    <i className="fas fa-child"></i>
+                                    {item.lastname}, {item.name}
+                                </div>
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item">39.318.614</li>
+                                    <li className="list-group-item">30/11/1994 ({item.age} años)</li>
+                                    <li className="list-group-item">Sin sanción</li>
+                                    <li className="list-group-item">Pase: Defensores del eco</li>
+                                    <li className="list-group-item">Préstamo: -</li>
+                                </ul>
                             </div>
                         ))
                     }

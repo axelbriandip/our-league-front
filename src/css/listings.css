@@ -45,3 +45,18 @@
     width: 16rem;
     padding: 0.3rem;
 }
+
+/* container players */
+.container-players {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+/* card player */
+.card {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.card-header i {
+    margin-right: .5rem;
+}

@@ -1,6 +1,10 @@
 import './css/main.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { Listings, Home, Nav } from './components/Index';
+import {
+  Listings,
+  Home,
+  Nav
+} from './components/Index';
 
 function App() {
 
