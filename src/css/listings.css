@@ -16,7 +16,7 @@
 /* search team */
 .header-listings .search .search-team {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     align-items: center;
 }
 .header-listings .search .search-team select {
@@ -25,13 +25,16 @@
     padding: 0.3rem;
 }
 .header-listings .search .search-team .shield {
-    background-color: thistle;
+    background-color: #fff;
     width: 3rem;
     height: 3rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.header-listings .search .search-team .shield i {
+    font-size: 1.5rem;
 }
 
 /* search player */

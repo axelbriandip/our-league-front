@@ -5,12 +5,13 @@ const Nav = () => {
     return (
         <div className="nav">
             <div className="logos">
-                <div className="logo-ol">Our League</div>
+                <i className="fas fa-shield"></i>
                 <div className="logo-cli">Liga Independiente</div>
             </div>
             <ul>
-                <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/listings'}>Listings</Link></li>
+                <li><Link to={'/listings'}>Listas de buena fe</Link></li>
+                <li><Link to={'#'}>Item 2</Link></li>
+                <li><Link to={'#'}>Item 3</Link></li>
             </ul>
         </div>
     );

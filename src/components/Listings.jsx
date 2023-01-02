@@ -19,12 +19,15 @@ const Listings = () => {
         <div className="container-listings">
             <div className="header-listings">
                 <div className="title">
-                    <h2>Listings</h2>
+                    <h2><strong>Listas de buena fe</strong></h2>
                 </div>
                 <div className="search">
                     <div className="search-team">
-                        <div className="shield">Sh</div>
-                        <select name="">
+                        <div className="shield">
+                            <i className="fas fa-shield"></i>
+                        </div>
+                        <select className="form-select" style={{ width: '16rem' }} aria-label="Default select example">
+                            <option selected>Todos los clubes</option>
                             {
                                 teams.map(item => (
                                     <option value={`${item.id}`} key={item.id}>
@@ -35,8 +38,10 @@ const Listings = () => {
                         </select>
                     </div>
                     <div className="search-player">
-                        <i class='fas fa-search'></i>
-                        <input type="text" placeholder="Type a name"/>
+                        <div className="input-group flex-nowrap">
+                            <span className="input-group-text" id="addon-wrapping">🔎</span>
+                            <input type="text" className="form-control" placeholder="Ingresar DNI.." aria-label="Username" aria-describedby="addon-wrapping" style={{width: '8rem'}}/>
+                        </div>
                     </div>
                 </div>
             </div>
