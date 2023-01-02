@@ -20,21 +20,27 @@ const Listings = () => {
 
     return (
         <div className="container-listings">
-            <h2>Listados de jugadores</h2>
             <div className="header-listings">
-                <div className="shield">
-                    {/* img shield */}
+                <div className="title">
+                    <h2>Listings</h2>
                 </div>
-                <div className="name-team">
-                    <select name="">
-                        {
-                            teams.map(item => (
-                                <option value={`${item.id}`} key={item.id}>
-                                    {item.name}
-                                </option>
-                            ))
-                        }
-                    </select>
+                <div className="search">
+                    <div className="search-team">
+                        <div className="shield">Sh</div>
+                        <select name="">
+                            {
+                                teams.map(item => (
+                                    <option value={`${item.id}`} key={item.id}>
+                                        {item.name}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                    </div>
+                    <div className="search-player">
+                        <i class='fas fa-search'></i>
+                        <input type="text" placeholder="Type a name"/>
+                    </div>
                 </div>
             </div>
             <div className="lists-players">
@@ -43,7 +49,7 @@ const Listings = () => {
                     {
                         players.map(item => (
                             <div className="item" key={item.id}>
-                                {item.name} - {item.age} años
+                                {item.lastname}, {item.name} - {item.age} años
                             </div>
                         ))
                     }

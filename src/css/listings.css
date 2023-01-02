@@ -1,18 +1,47 @@
 @import url('./main.css');
 
-.container-listings .shield {
-    background-color: violet;
-    height: 3rem;
-    width: 3rem;
+.header-listings {
+    padding: 1rem 0;
+    border-bottom: .1rem solid var(--black);
 }
-.container-listings .header-listings {
+.header-listings .title {
+    display: block;
+    margin-bottom: 1rem;
+}
+.header-listings .search {
     display: flex;
+    gap: 3rem;
 }
-.container-listings .name-team select {
-    background-color: var(--white);
-    border: inherit;
-    outline: none;
 
-    width: 14rem;
+/* search team */
+.header-listings .search .search-team {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.header-listings .search .search-team select {
+    width: 12rem;
     font-size: 1rem;
+    padding: 0.3rem;
+}
+.header-listings .search .search-team .shield {
+    background-color: thistle;
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* search player */
+.header-listings .search-player {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.header-listings .search-player input {
+    font-size: 1rem;
+    width: 16rem;
+    padding: 0.3rem;
 }
