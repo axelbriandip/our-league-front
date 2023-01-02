@@ -13,7 +13,6 @@ function App() {
       <HashRouter>
         <Nav/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
           <Route path='/listings' element={<Listings/>}/>
         </Routes>
         {/* footer */}

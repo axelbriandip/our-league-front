@@ -63,3 +63,14 @@
 .card-header i {
     margin-right: .5rem;
 }
+/* add */
+.add {
+    margin-top: 1rem;
+}
+.add a {
+    text-decoration: none;
+    color: var(--black);
+}
+.add a:first-child {
+    margin-right: 1rem;
+}
