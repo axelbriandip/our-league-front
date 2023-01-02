@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+
+    border-top: .1rem solid var(--black);
+    border-bottom: .1rem solid var(--black);
+}
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav ul li {
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+.nav .logos {
+    display: flex;
+    gap: 1.5rem;
+}
